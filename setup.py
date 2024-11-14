@@ -6,7 +6,6 @@ with open('README.md') as f:
 setup(
     name="bewspweb",
     version="0.1.0",
-    packages=find_packages(),
     install_requires=[
         'selenium',
         'webdriver-manager'
