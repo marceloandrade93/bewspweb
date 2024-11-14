@@ -1,4 +1,9 @@
-from bewspweb import bewspweb_start, bewspweb_weave, bewspweb_print
+# Imports to test
+import sys
+import os
+sys.path.append(os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
+import unittest
+from src.bewspweb.bewspweb import bewspweb_start, bewspweb_weave, bewspweb_print
 from selenium.webdriver.common.by import By
 
 

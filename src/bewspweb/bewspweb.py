@@ -123,21 +123,3 @@ def bewspweb_print(list=None, col_a=0, col_b=1):
 
     for i in list:
         print(f"{i[col_a]} | {i[col_b]}")
-
-
-# if __name__ == "__main__":
-
-#     # Initialize driver
-#     bewspweb_start(url_main="https://vimm.net/vault/GBA/X")
-
-#     # Start webscrapping
-#     list_woven = bewspweb_weave(type_element=By.XPATH,
-#                                 element="/html/body/div[2]/div[2]/div/main/table/tbody",
-#                                 type_subelement=By.XPATH,
-#                                 subelement="/html/body/div[2]/div[2]/div/main/table/tbody/tr",
-#                                 selsubtag="a", 
-#                                 subtag="href", 
-#                                 tries=10)
-
-#     # Print woven list
-#     bewspweb_print(list=list_woven, col_a=0, col_b=1)
