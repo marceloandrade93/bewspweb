@@ -1,17 +1,5 @@
-# Imports to test
-import sys
-import os
-sys.path.append(os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
 import unittest
-from src.bewspweb.bewspweb import bewspweb_start, bewspweb_weave, bewspweb_print
-# Necessary modules to import
-from selenium import webdriver
-from selenium.webdriver.common.by import By
-from selenium.webdriver.support.ui import WebDriverWait
-from selenium.webdriver.support import expected_conditions as EC
-from selenium.webdriver.chrome.service import Service as ChromeService
-from webdriver_manager.chrome import ChromeDriverManager
-from time import sleep
+from bewspweb import *
 
 
 class TestBewspweb(unittest.TestCase):

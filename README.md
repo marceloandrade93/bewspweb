@@ -53,7 +53,6 @@ bewspweb_start(url_main="https://webscraper.io/test-sites/e-commerce/scroll", he
 
 ```python
 from bewspweb import bewspweb_start, bewspweb_weave
-from selenium.webdriver.common.by import By
 
 # Initialize driver
 bewspweb_start(url_main="https://webscraper.io/test-sites/e-commerce/scroll")
@@ -72,7 +71,6 @@ list_name = bewspweb_weave(type_element=By.XPATH,
 
 ```python
 from bewspweb import bewspweb_start, bewspweb_weave, bewspweb_print
-from selenium.webdriver.common.by import By
 
 # Initialize driver
 bewspweb_start(url_main="https://webscraper.io/test-sites/e-commerce/scroll")

@@ -1,5 +1,6 @@
-# Imports to test
+# No env test
 from bewspweb import *
+
 
 # Initialize driver
 bewspweb_start(url_main="https://webscraper.io/test-sites/e-commerce/scroll", headless=True)
