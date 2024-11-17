@@ -40,13 +40,13 @@ This function is to print the collected data from a web page.
 ```python
 from bewspweb import bewspweb_start
 
-bewspweb_start(url_main="https://webscraper.io/test-sites/e-commerce/scroll")
+driver = bewspweb_start(url_main="https://webscraper.io/test-sites/e-commerce/scroll")
 ```
 
 ```python
 from bewspweb import bewspweb_start
 
-bewspweb_start(url_main="https://webscraper.io/test-sites/e-commerce/scroll", headless=True, windows_mode="maximize", mute_audio=True)
+driver = bewspweb_start(url_main="https://webscraper.io/test-sites/e-commerce/scroll", headless=True, windows_mode="maximize", mute_audio=True)
 ```
 
 * **Collecting with bewspweb_weave()**
@@ -55,16 +55,16 @@ bewspweb_start(url_main="https://webscraper.io/test-sites/e-commerce/scroll", he
 from bewspweb import bewspweb_start, bewspweb_weave
 
 # Initialize driver
-bewspweb_start(url_main="https://webscraper.io/test-sites/e-commerce/scroll")
+driver = bewspweb_start(url_main="https://webscraper.io/test-sites/e-commerce/scroll")
 
 # Start webscrapping
-list_name = bewspweb_weave(type_element=By.XPATH,
-    element="/html/body/div[1]/div[3]/div/div[2]/div[2]",
-    type_subelement=By.XPATH,
-    subelement="/html/body/div[1]/div[3]/div/div[2]/div[2]/div",
-    selsubtag="a",
-    subtag="title",
-    tries=10)
+list_name = bewspweb_weave(wbdriver=driver, type_element=By.XPATH,
+                           element="/html/body/div[1]/div[3]/div/div[2]/div[2]",
+                           type_subelement=By.XPATH,
+                           subelement="/html/body/div[1]/div[3]/div/div[2]/div[2]/div",
+                           selsubtag="a",
+                           subtag="title",
+                           tries=10)
 ```
 
 * **Printing with bewspweb_print()**
@@ -73,16 +73,16 @@ list_name = bewspweb_weave(type_element=By.XPATH,
 from bewspweb import bewspweb_start, bewspweb_weave, bewspweb_print
 
 # Initialize driver
-bewspweb_start(url_main="https://webscraper.io/test-sites/e-commerce/scroll")
+driver = bewspweb_start(url_main="https://webscraper.io/test-sites/e-commerce/scroll")
 
 # Start webscrapping
-list_name = bewspweb_weave(type_element=By.XPATH,
-    element="/html/body/div[1]/div[3]/div/div[2]/div[2]",
-    type_subelement=By.XPATH,
-    subelement="/html/body/div[1]/div[3]/div/div[2]/div[2]/div",
-    selsubtag="a",
-    subtag="title",
-    tries=10)
+list_name = bewspweb_weave(wbdriver=driver, type_element=By.XPATH,
+                           element="/html/body/div[1]/div[3]/div/div[2]/div[2]",
+                           type_subelement=By.XPATH,
+                           subelement="/html/body/div[1]/div[3]/div/div[2]/div[2]/div",
+                           selsubtag="a",
+                           subtag="title",
+                           tries=10)
 
 # Print woven list
 bewspweb_print(list=list_name, col_a=0, col_b=1)
