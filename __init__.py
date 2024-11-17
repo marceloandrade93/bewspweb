@@ -1,1 +1,0 @@
-from .bewspweb import *

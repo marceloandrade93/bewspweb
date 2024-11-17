@@ -1,11 +1,11 @@
-from setuptools import setup, find_packages
+from setuptools import setup
 
 with open('README.md') as f:
     long_description = f.read()
 
 setup(
     name="bewspweb",
-    version="0.1.2",
+    version="0.1.3",
     install_requires=[
         'selenium',
         'webdriver-manager'
@@ -23,5 +23,6 @@ setup(
         "Operating System :: OS Independent",
     ],
     python_requires='>=3.6',
-    packages=find_packages(),
+    packages=['bewspweb', 'test'],
+    include_package_data=True,
 )
